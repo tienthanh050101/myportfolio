@@ -1,0 +1,86 @@
+.hero-wrapper {
+  width: 1100px;
+  max-width: 100%;
+  margin-top: 40px;
+  padding: 40px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 100px;
+}
+
+.hello {
+  font-size: 22px;
+  font-weight: 300;
+  color: #444;
+}
+
+.hero-name {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #000;
+}
+
+.job-title {
+  font-size: 18px;
+  color: #6d6d6d;
+  margin-top: -5px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.btn-black {
+  background: black;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-black:hover {
+  opacity: 0.85;
+}
+
+.btn-outline {
+  border: 1px solid black;
+  background: transparent;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-outline:hover {
+  background: black;
+  color: white;
+}
+
+.hero-right img {
+  object-fit: contain;
+}

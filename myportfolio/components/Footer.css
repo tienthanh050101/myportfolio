@@ -1,0 +1,39 @@
+.footer {
+  width: 100%;
+  background: #3a3a3a;
+  padding: 15px 0;
+}
+
+.footer-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-left img {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.footer-left img:hover {
+  transform: scale(1.1);
+}
+
+.footer-right p {
+  color: #dcdcdc;
+  font-size: 14px;
+  margin: 0;
+}

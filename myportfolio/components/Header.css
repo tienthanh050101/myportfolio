@@ -1,0 +1,64 @@
+.header {
+  width: 100%;
+  background: white;
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  position: fixed;
+}
+
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name-block {
+  line-height: 1.1;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+}
+
+.job {
+  font-size: 11px;
+  color: #666;
+  margin-top: 2px;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #555;
+}
+
+.nav-item:hover {
+  color: #000;
+}
+
+
+.active {
+  color: #000;
+  border-bottom: 2px solid #000;
+  padding-bottom: 2px;
+}
