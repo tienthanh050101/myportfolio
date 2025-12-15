@@ -4,16 +4,16 @@ import "./ReadMe.css";
 export default function ReadMe() {
   return (
     <section className="readme-section">
-      {/* TITLE */}
+
       <h2 className="readme-title">READ ME</h2>
       <p className="readme-subtitle">
         Sometimes I write multiple projects into a blog post
       </p>
 
-      {/* BLOG CARDS */}
+
       <div className="readme-grid">
 
-        {/* CARD 1 */}
+
         <div className="readme-card">
           <Image
             src="/image/cat1.png"
@@ -46,7 +46,7 @@ export default function ReadMe() {
           </div>
         </div>
 
-        {/* CARD 2 */}
+
         <div className="readme-card">
           <Image
             src="/image/cat2.png"
@@ -79,7 +79,7 @@ export default function ReadMe() {
           </div>
         </div>
 
-        {/* CARD 3 */}
+
         <div className="readme-card">
           <Image
             src="/image/cat3.png"
@@ -113,7 +113,7 @@ export default function ReadMe() {
         </div>
       </div>
 
-      {/* CENTER BUTTON */}
+
       <div className="readme-center-btn">
         <button className="readme-btn">See My Post</button>
       </div>

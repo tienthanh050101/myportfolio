@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="hero-wrapper">
       
-      {/* LEFT */}
+
       <div className="hero-left">
         <p className="hello">Hello, i’m</p>
 
@@ -15,7 +15,6 @@ export default function Hero() {
 
         <p className="job-title">UI & UX Designer</p>
 
-        {/* Social Icons */}
         <div className="social-icons">
           <Image src="/image/google.png" width={22} height={22} alt="Google" />
           <Image src="/image/linked.png" width={22} height={22} alt="LinkedIn" />
@@ -24,7 +23,7 @@ export default function Hero() {
           <Image src="/image/git.png" width={22} height={22} alt="Github" />
         </div>
 
-        {/* BUTTONS */}
+
         <div className="hero-buttons">
           <button className="btn-black">
             Get My Resume
@@ -36,7 +35,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* RIGHT */}
+
       <div className="hero-right">
         <Image
           src="/image/jumbotronBig.png"

@@ -4,8 +4,6 @@ import "./Portfolio.css";
 export default function Portfolio() {
   return (
     <div className="portfolio-wrapper">
-
-     
       <div className="filter-menu">
         <span className="active">All</span>
         <span>App</span>
@@ -13,10 +11,15 @@ export default function Portfolio() {
         <span>Mobile</span>
       </div>
 
-  
       <div className="portfolio-grid">
         <div className="portfolio-card">
-          <Image src="/image/pr1.png" width={400} height={260} alt="project" />
+          <div className="card-photo card-photo1">
+          <img
+            src="/image/pr1.png"
+            
+            alt="project"
+          />
+          </div>
           <div className="card-info">
             <span className="category">CATEGORY</span>
             <div className="info-row">
@@ -27,7 +30,14 @@ export default function Portfolio() {
         </div>
 
         <div className="portfolio-card">
-          <Image src="/image/pr2.png" width={400} height={260} alt="project" />
+          <div className="card-photo card-photo2">
+          <img
+           
+            src="/image/pr2.png"
+            
+            alt="project"
+          />
+          </div>
           <div className="card-info">
             <span className="category">CATEGORY</span>
             <div className="info-row">
@@ -38,7 +48,14 @@ export default function Portfolio() {
         </div>
 
         <div className="portfolio-card">
-          <Image src="/image/pr3.png" width={400} height={260} alt="project" />
+          <div className="card-photo card-photo3">
+          <img
+            
+            src="/image/pr3.png"
+           
+            alt="project"
+          />
+          </div>
           <div className="card-info">
             <span className="category">CATEGORY</span>
             <div className="info-row">
@@ -49,11 +66,9 @@ export default function Portfolio() {
         </div>
       </div>
 
-    
       <div className="portfolio-center-btn">
         <button className="btn-portfolio">See My Portofolio</button>
       </div>
-
 
       <div className="about-container">
         <div className="about-img">

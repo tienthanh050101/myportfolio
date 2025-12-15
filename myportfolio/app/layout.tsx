@@ -1,19 +1,22 @@
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import type { ReactNode } from "react";
 
 export const metadata = {
   title: "Portfolio",
   description: "My Portfolio Website",
 };
 
-export default function RootLayout({ children }) {
+export type RootLayoutProp= {children: ReactNode}
+
+export default function RootLayout({children}: RootLayoutProp ) {
   return (
     <html lang="en">
       <body>
-        <Header />     {/* HEADER */}
+        <Header />
         <main>{children}</main>
-        <Footer />     {/* FOOTER */}
+        <Footer />
       </body>
     </html>
   );

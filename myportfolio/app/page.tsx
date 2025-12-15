@@ -1,12 +1,12 @@
-import Hero from "@/components/Hero";
-import Portfolio from "@/components/Portfolio";
-import Testimonial from "@/components/Testimonial";
-import ReadMe from "@/components/ReadMe";
+import Hero from "@/components/hero";
+import Portfolio from "@/components/portfolio";
+import Testimonial from "@/components/testimonial";
+import ReadMe from "@/components/readme";
 import "./globals.css";
 
 export default function HomePage() {
   return (
-    <main className="flex flex-col items-center w-full bg-gray-100 text-gray-800">
+    <div className="flex flex-col items-center w-full text-gray-800">
       <section id="hero">
         <Hero />
       </section>
@@ -19,6 +19,6 @@ export default function HomePage() {
       <section id="readme">
         <ReadMe />
       </section>
-    </main>
+    </div>
   );
 }
