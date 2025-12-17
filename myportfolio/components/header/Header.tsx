@@ -1,10 +1,52 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import "./Header.css";
 
+type ActiveKey = "work" | "about" | "blog" | "todo";
+
 export default function Header() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
+  const [active, setActive] = useState<ActiveKey>(
+    pathname === "/todo-list" ? "todo" : "work"
+  );
+
+  // 🔹 Active theo scroll (chỉ áp dụng ở Home)
+  useEffect(() => {
+    if (!isHome) return;
+
+    const sections = [
+      { id: "hero", key: "about" },
+      { id: "testimonial", key: "blog" },
+    ];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const found = sections.find((s) => s.id === entry.target.id);
+            if (found) setActive(found.key as ActiveKey);
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    sections.forEach((s) => {
+      const el = document.getElementById(s.id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, [isHome]);
+
   return (
     <header className="header">
-
       <div className="header-left">
         <Image
           src="/image/headerface.png"
@@ -23,12 +65,38 @@ export default function Header() {
       </div>
 
       <nav className="nav">
-        <a href="#" className="nav-item active">Work</a>
-        <a href="#hero" className="nav-item">About Me</a>
-        <a href="#testimonial" className="nav-item">Blog</a>
-        <a href="#" className="nav-item">Content</a>
-      </nav>
+        <Link
+          href="/"
+          className={`nav-item ${active === "work" ? "active" : ""}`}
+          onClick={() => setActive("work")}
+        >
+          Work
+        </Link>
 
+        <Link
+          href={isHome ? "#hero" : "/#hero"}
+          className={`nav-item ${active === "about" ? "active" : ""}`}
+          onClick={() => setActive("about")}
+        >
+          About Me
+        </Link>
+
+        <Link
+          href={isHome ? "#testimonial" : "/#testimonial"}
+          className={`nav-item ${active === "blog" ? "active" : ""}`}
+          onClick={() => setActive("blog")}
+        >
+          Blog
+        </Link>
+
+        <Link
+          href="/todo-list"
+          className={`nav-item ${active === "todo" ? "active" : ""}`}
+          onClick={() => setActive("todo")}
+        >
+          To do List
+        </Link>
+      </nav>
     </header>
   );
 }
