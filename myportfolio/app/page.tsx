@@ -2,6 +2,7 @@ import Hero from "@/components/hero";
 import Portfolio from "@/components/portfolio";
 import Testimonial from "@/components/testimonial";
 import ReadMe from "@/components/readme";
+import HomeBubbles from "@/components/bubble/bubble";
 import "./globals.css";
 
 export default function HomePage() {
@@ -18,6 +19,9 @@ export default function HomePage() {
       </section>
       <section id="readme">
         <ReadMe />
+      </section>
+      <section>
+        <HomeBubbles />
       </section>
     </div>
   );

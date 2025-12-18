@@ -16,7 +16,6 @@ export default function Header() {
     pathname === "/todo-list" ? "todo" : "work"
   );
 
-  // 🔹 Active theo scroll (chỉ áp dụng ở Home)
   useEffect(() => {
     if (!isHome) return;
 
@@ -71,22 +70,6 @@ export default function Header() {
           onClick={() => setActive("work")}
         >
           Work
-        </Link>
-
-        <Link
-          href={isHome ? "#hero" : "/#hero"}
-          className={`nav-item ${active === "about" ? "active" : ""}`}
-          onClick={() => setActive("about")}
-        >
-          About Me
-        </Link>
-
-        <Link
-          href={isHome ? "#testimonial" : "/#testimonial"}
-          className={`nav-item ${active === "blog" ? "active" : ""}`}
-          onClick={() => setActive("blog")}
-        >
-          Blog
         </Link>
 
         <Link
