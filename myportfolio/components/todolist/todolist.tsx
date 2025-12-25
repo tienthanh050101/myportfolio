@@ -13,6 +13,9 @@ export default function TodoList() {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [input, setInput] = useState("");
 
+  const [editingId, setEditingId] = useState<number | null>(null);
+  const [editText, setEditText] = useState("");
+
   const addTodo = () => {
     if (!input.trim()) return;
 
@@ -41,6 +44,23 @@ export default function TodoList() {
     setTodos(todos.filter(todo => todo.id !== id));
   };
 
+  const startEdit = (todo: Todo) => {
+    setEditingId(todo.id);
+    setEditText(todo.text);
+  };
+
+  const saveEdit = (id: number) => {
+    if (!editText.trim()) return;
+
+    setTodos(
+      todos.map(todo =>
+        todo.id === id ? { ...todo, text: editText } : todo
+      )
+    );
+    setEditingId(null);
+    setEditText("");
+  };
+
   return (
     <div className="todo-container">
       <h1>📝 Todo List</h1>
@@ -57,10 +77,25 @@ export default function TodoList() {
       <ul>
         {todos.map(todo => (
           <li key={todo.id} className={todo.completed ? "done" : ""}>
-            <span onClick={() => toggleTodo(todo.id)}>
-              {todo.text}
-            </span>
-            <button onClick={() => deleteTodo(todo.id)}>❌</button>
+            {editingId === todo.id ? (
+              <>
+                <input
+                  value={editText}
+                  onChange={(e) => setEditText(e.target.value)}
+                  onKeyDown={(e) => e.key === "Enter" && saveEdit(todo.id)}
+                />
+                <button onClick={() => saveEdit(todo.id)}>💾</button>
+                <button onClick={() => setEditingId(null)}>❌</button>
+              </>
+            ) : (
+              <>
+                <span onClick={() => toggleTodo(todo.id)}>
+                  {todo.text}
+                </span>
+                <button onClick={() => startEdit(todo)}>✏️</button>
+                <button onClick={() => deleteTodo(todo.id)}>🗑</button>
+              </>
+            )}
           </li>
         ))}
       </ul>

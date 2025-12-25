@@ -21,7 +21,7 @@
   text-decoration: none;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-  background: linear-gradient(135deg, #4b2d90, #451b39);
+  background: linear-gradient(135deg, #ab91e9, #252325);
 }
 
 .bubble:hover {
