@@ -85,13 +85,7 @@ export default function Portfolio() {
           <h1 className="about-title">WHO AM I</h1>
 
           <p className="about-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sem
-            posuere amet augue. Ut sed elit amet nunc aliquam egestas in ornare
-            justo. Pelle dui elementum sagittis nisl, imperdiet. Mi faucibus
-            tortor, lacus leo, ac nec aliquam odio purus. Condimentum id arcu
-            vitae, amet. Amet, elementum nisi, nunc sed sodales mus at praesent.
-            Consequat et sed sodales cursus viverra sollicitudin. Ornare
-            convallis elementum a, tristique eget tortor facilisis...
+            I am a passionate software developer with a strong interest in technology and continuous learning. I enjoy solving complex problems and building reliable, efficient, and user-friendly applications. With solid logical thinking and experience working with various programming languages and frameworks, I can quickly adapt to new technologies and project requirements. I value clean, maintainable code and always pay attention to performance and scalability. In addition, I work well both independently and in a team, communicate clearly, and take responsibility for my work, aiming to deliver practical value to businesses and end users.
           </p>
 
           <button className="btn-cv">Get My CV</button>

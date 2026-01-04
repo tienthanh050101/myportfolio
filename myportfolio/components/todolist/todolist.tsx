@@ -92,7 +92,7 @@ export default function TodoList() {
                 <span onClick={() => toggleTodo(todo.id)}>
                   {todo.text}
                 </span>
-                <button onClick={() => startEdit(todo)}>✏️</button>
+                <button className="edit" onClick={() => startEdit(todo)}>✏️</button>
                 <button onClick={() => deleteTodo(todo.id)}>🗑</button>
               </>
             )}

@@ -43,3 +43,8 @@ li.done span {
   text-decoration: line-through;
   color: gray;
 }
+
+.edit{
+  margin-left: auto;
+  padding-right: 12px;
+}
